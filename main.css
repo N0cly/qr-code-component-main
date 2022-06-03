@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root{
+
+	/* COLOR */
+	--White : hsl(0, 0%, 100%);
+	--Light-gray: hsl(212, 45%, 89%);
+	--Grayish-blue: hsl(220, 15%, 55%);
+	--Dark-blue: hsl(218, 44%, 22%);
+
+	/* BODY COPY */
+
+	--Font-size : 15px;
+	--font-title :24px;
+	--font-description : 15px;
+
+	/* FONT */
+
+	--body-font : 'Outfit', sans-serif;
+	--Weight-title: 700;
+	--Weight-description: 400;
+
+	/* STYLE */
+	--radius: 15px;
+}
+
+body{
+	background-color: var(--Light-gray);
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: max-content;
+	grid-template-rows: 1fr;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	font-family: var(--body-font);
+}
+
+.card{
+
+	background-color: var(--White);
+	display: grid;
+	grid-template-columns: min-content;
+	grid-template-rows: max-content 1fr;
+	border-radius: var(--radius);
+	
+}
+
+.content{
+	text-align: center;
+}
+
+.qr-code-img{
+	width: 300px;
+	border-radius: var(--radius);
+	margin: .90rem;
+}
+
+.text{
+	font-size: var(--Font-size);
+	margin-right: 1.5rem;
+	margin-left:1.5rem ;
+	margin-top: .75rem;
+	margin-bottom: 1rem;
+}
+
+.title{
+	font-weight: var(--Weight-title);
+	margin-bottom: .75rem;
+	color: var(--Dark-blue);
+	font-size: 24px;
+}
+
+.description{
+	font-weight: var(--Weight-description);
+	color: var(--Grayish-blue);
+}
+
+.attribution{
+	font-size: 11px; text-align: center;
+}
+
+.attribution a{
+	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1024px) {
+
+	.qr-code-img{
+		width: 400px;
+		margin: 1.27rem;
+	}
+
+	.title{
+		font-size: calc(var(--font-title)*1.35);
+		margin-bottom: 1.2rem;
+	}
+
+	.description{
+		font-size: calc(var(--font-description)*1.35);
+	}
+
+	.attribution{
+		font-size: 15px;
+		margin-top: .75rem;
+	}
+	
+}
+
+@media screen and (min-width: 1440px) {
+
+	.qr-code-img{
+		width: 450px;
+		margin: 1.45rem;
+	}
+
+	.title{
+		font-size: calc(var(--font-title)*1.5);
+	}
+
+	.description{
+		font-size: calc(var(--font-description)*1.55);
+	}
+
+	.attribution{
+		font-size: 17px;
+	}
+	
+}
